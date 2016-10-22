@@ -9,6 +9,8 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.css" />
+    <link rel="stylesheet" href="bower_components/flickity/css/flickity.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -57,7 +59,7 @@
                   <li><a href="https://itunes.apple.com/cn/app/hou-si-te-gong-zhong-zhang/id867350536?l=en&mt=8" target=_blank>手机App</a></li>
                 </ul>
               </li>
-              <li><a href="#">客户案例</a></li>
+              <li><a ng-href="#/example">客户案例</a></li>
               <li><a href="#">服务价格</a></li>
               <li><a ng-href="#/agent">渠道代理</a></li>
               <li><a href="http://help.weixinhost.com/hc/" target=_blank>帮助中心</a></li>
@@ -168,6 +170,16 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery.touchSlider/jquery.touchSlider.js"></script>
+    <script src="bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="bower_components/desandro-matches-selector/matches-selector.js"></script>
+    <script src="bower_components/ev-emitter/ev-emitter.js"></script>
+    <script src="bower_components/fizzy-ui-utils/utils.js"></script>
+    <script src="bower_components/get-size/get-size.js"></script>
+    <script src="bower_components/unipointer/unipointer.js"></script>
+    <script src="bower_components/tap-listener/tap-listener.js"></script>
+    <script src="bower_components/unidragger/unidragger.js"></script>
+    <script src="bower_components/flickity/js/index.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -180,6 +192,7 @@
         <script src="scripts/controllers/marketing_push.js"></script>
         <script src="scripts/controllers/agent.js"></script>
         <script src="scripts/controllers/appstore.js"></script>
+        <script src="scripts/controllers/example.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -54,6 +54,11 @@ angular
         controller: 'AppstoreCtrl',
         controllerAs: 'appstore'
       })
+      .when('/example', {
+        templateUrl: 'views/example.html',
+        controller: 'ExampleCtrl',
+        controllerAs: 'example'
+      })
       .otherwise({
         redirectTo: '/'
       });

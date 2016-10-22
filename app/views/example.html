@@ -1,0 +1,174 @@
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(".main_visual").hover(function(){
+        $("#btn_prev,#btn_next").fadeIn()
+    },function(){
+        $("#btn_prev,#btn_next").fadeOut()
+    });
+    
+    $dragBln = false;
+    
+    $(".main_image").touchSlider({
+        flexible : true,
+        speed : 200,
+        btn_prev : $("#btn_prev"),
+        btn_next : $("#btn_next"),
+        paging : $(".flicking_con a"),
+        counter : function (e){
+            $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+        }
+    });
+    
+    $(".main_image").bind("mousedown", function() {
+        $dragBln = false;
+    });
+    
+    $(".main_image").bind("dragstart", function() {
+        $dragBln = true;
+    });
+    
+    $(".main_image a").click(function(){
+        if($dragBln) {
+            return false;
+        }
+    });
+    
+    timer = setInterval(function(){
+        $("#btn_next").click();
+    }, 5000);
+    
+    $(".main_visual").hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        },5000);
+    });
+    
+    $(".main_image").bind("touchstart",function(){
+        clearInterval(timer);
+    }).bind("touchend", function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 5000);
+    });
+    
+});
+</script>
+<div class="app app-header-fixed" id="app">
+    <div class="">
+        <p class="example_title">我们的客户</p>
+        <p class="example_little_title">了解公众号背后的故事</p>
+        <div class="main_visual">
+            <!-- <div class="flicking_con">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+            </div> -->
+            <div class="main_image">
+                <ul>
+                    <li>
+                        <div>
+                            <div class="example">
+                                <div class="example_all">
+                                    <div class="example_title_image">
+                                        <img src="images/yingteer.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <p class="example_txt">帮助英特尔管理粉丝</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="example_txtp_div">
+                                    <p>
+                                        英特尔中国在侯斯特的帮助下，将粉丝清晰地进行属性分类。通过挖掘线上Campaign及线下Event的数据，进一步分析归类粉丝，并以此提供个性化的菜单及内容，创建粉丝的专属体验。
+                                    </p>
+                                </div>
+                                <div class="example_m_all">
+                                    <div>
+                                        <img src="images/in1.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/in2.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/in3.png" alt=".">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li><span class="img_4"></span></li>
+                    <li><span class="img_1"></span></li>
+                    <li><span class="img_2"></span></li>
+                    <li><span class="img_5"></span></li> -->
+                </ul>
+                <a href="javascript:;" id="btn_prev"></a>
+                <a href="javascript:;" id="btn_next"></a>
+            </div>
+
+        </div>
+        <div style="width:100%; height: 30rem; background-color:#F5F5F5; margin-top:-10rem;" >
+            <div>
+                <p class="example_div_tp">10万公众号的共同选择</p>
+            </div>
+            <div class="example_div_all gray">
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+            </div>
+        </div>
+
+        <p class="example_title">定制开发案例</p>
+        <p class="example_bottom_title">
+            侯斯特为你提供创意+设计+技术一体的解决方案
+        </p>
+        <div class="example_bottom">
+            <div class="example_bottom_all">
+                <div>
+                    <img src="images/1@3x (1).png" alt=".">
+                </div>
+                <div>
+                    <img src="images/1@3x (1).png" alt=".">
+                </div>
+                <div>
+                    <img src="images/1@3x (1).png" alt=".">
+                </div>
+                <div>
+                    <img src="images/1@3x (1).png" alt=".">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
