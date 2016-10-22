@@ -34,6 +34,11 @@ angular
         controller: 'PartnersCtrl',
         controllerAs: 'partners'
       })
+      .when('/term', {
+        templateUrl: 'views/term.html',
+        controller: 'TermCtrl',
+        controllerAs: 'term'
+      })
       .otherwise({
         redirectTo: '/'
       });
