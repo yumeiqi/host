@@ -49,6 +49,11 @@ angular
         controller: 'AgentCtrl',
         controllerAs: 'agent'
       })
+      .when('/appstore', {
+        templateUrl: 'views/appstore.html',
+        controller: 'AppstoreCtrl',
+        controllerAs: 'appstore'
+      })
       .otherwise({
         redirectTo: '/'
       });
