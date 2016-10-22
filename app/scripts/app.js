@@ -39,6 +39,11 @@ angular
         controller: 'TermCtrl',
         controllerAs: 'term'
       })
+      .when('/marketing_push', {
+        templateUrl: 'views/marketing_push.html',
+        controller: 'MarketingPushCtrl',
+        controllerAs: 'marketingPush'
+      })
       .otherwise({
         redirectTo: '/'
       });
