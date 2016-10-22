@@ -44,6 +44,11 @@ angular
         controller: 'MarketingPushCtrl',
         controllerAs: 'marketingPush'
       })
+      .when('/agent', {
+        templateUrl: 'views/agent.html',
+        controller: 'AgentCtrl',
+        controllerAs: 'agent'
+      })
       .otherwise({
         redirectTo: '/'
       });
