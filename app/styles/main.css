@@ -1019,6 +1019,23 @@ body {
   width: 100%;
 }
 
+.example_m_third{
+  width: 100%;
+  margin-left: 6%;
+}
+
+.example_m_third div{
+  width: 50%;
+  float: left;
+  padding: 2rem;
+}
+
+.example_m_third div img{
+  width: 100%;
+}
+
+
+
 .example_div_all{
   width: 55%;
   height: 20rem;
@@ -1078,8 +1095,8 @@ div.flicking_con{position:absolute;top:360px;left:50%;z-index:999;width:300px;he
 div.flicking_con a{float:left;width:21px;height:21px;margin:0;padding:0;background:url('../images/btn_main_img.png') 0 0 no-repeat;display:block;text-indent:-1000px}
 div.flicking_con a.on{background-position:0 -21px}
 #btn_prev,#btn_next{z-index:11111;position:absolute;display:block;width:73px!important;height:74px!important;top:50%;margin-top:-37px;display:none;}
-#btn_prev{background:url(../images/hover_left.png) no-repeat left top;left:100px;}
-#btn_next{background:url(../images/hover_right.png) no-repeat right top;right:100px;}
+#btn_prev{background:url(../images/hover_left.png) no-repeat left top;left:27%;}
+#btn_next{background:url(../images/hover_right.png) no-repeat right top;right:4%;}
 
 /*服务价格*/
 .pricing_all{
@@ -1164,3 +1181,22 @@ div.flicking_con a.on{background-position:0 -21px}
   font-size: 1.5rem;
   line-height: 2rem;
 }
+
+.scroll-outer{height:550px;}
+#scroll{width:1080px;margin:0 auto;padding-top:30px;font-family:"Microsoft Yahei";}
+#scroll .owl-wrapper-outer{margin:0 auto;}
+#scroll .item{position:relative;width:210px;height:500px;margin:0 auto;background-color:#fff;overflow:hidden;}
+#scroll .shd{position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.15);}
+#scroll .shd a{display:block;width:250px;height:239px;*background-image:url(about:blank);background-image:url(about:blank)\0;}
+#scroll .txt{position:absolute;left:0;bottom:0;width:226px;height:100px;padding:0 12px;color:#888;box-shadow:0 0 15px 15px rgba(228, 233, 238, 0.95);background-color:#e4e9ee\9;background-color:rgba(228, 233, 238, 0.95);}
+#scroll h3{width:226px;height:25px;margin-bottom:6px;padding-top:6px;font:700 18px/25px arial,"Microsoft Yahei";overflow:hidden;}
+#scroll h3 a{color:#333;text-decoration:none;}
+#scroll h3 a:hover{color:#338de6;}
+#scroll p{width:226px;height:54px;line-height:18px;font-size:12px;}
+#scroll .item:hover .shd{background-color:rgba(0, 0, 0, 0);}
+#scroll .item:hover .txt{background-color:#fff\9;background-color:rgba(248, 249, 249, 0.95);box-shadow:0 0 15px 15px rgba(248, 249, 249, 0.95);}
+.owl-theme .owl-controls .owl-buttons div{position:absolute;top:180px;width:30px;height:60px;margin:0;padding:0;border-radius:0;font:60px/60px "宋体";background-color:transparent;overflow:hidden;_display:none;}
+.owl-theme .owl-controls .owl-buttons .owl-prev{left:-40px;}
+.owl-theme .owl-controls .owl-buttons .owl-next{right:-40px;}
+.owl-theme .owl-controls .owl-buttons .owl-prev:before{content:"<";}
+.owl-theme .owl-controls .owl-buttons .owl-next:before{content:">";}

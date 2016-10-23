@@ -40,6 +40,7 @@ module.exports = function(config) {
       'bower_components/tap-listener/tap-listener.js',
       'bower_components/unidragger/unidragger.js',
       'bower_components/flickity/js/index.js',
+      'bower_components/owl.carousel/dist/owl.carousel.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
