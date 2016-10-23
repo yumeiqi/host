@@ -1134,6 +1134,33 @@ div.flicking_con a.on{background-position:0 -21px}
   margin-bottom: 6rem;
 }
 .pring_table{
-  width: 55%;
-  margin-left: 25%;
+  width: 60%;
+  margin-left: 20%;
+  background-color: white;
+}
+.pring_table_main{
+  width: 60%;
+  margin-left: 20%;
+  background-color: white;
+}
+.pring_table table tr td{
+  height: 5em;
+  width: 7rem;
+  text-align: center;
+  line-height: 4rem;
+}
+
+.pring_table_main table tr td{
+  height: 5em;
+  width: 7rem;
+  text-align: center;
+}
+.table_title p{
+  font-size: 1.9rem;
+  margin-top: 1.4rem;
+}
+.table_p{
+  margin-left: 48%;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
