@@ -1,18 +1,37 @@
+<script type="text/javascript">
+  var options = {
+    useEasing : true, 
+    useGrouping : true, 
+    separator : ',', 
+    decimal : '.', 
+    prefix : '', 
+    suffix : '%' 
+  };
+  var demo = new CountUp("first", 0, 43, 0, 2.5, options);
+  var demo1 = new CountUp("secound", 0, 36, 0, 2.5, options);
+  var demo2 = new CountUp("third", 0, 78, 0, 2.5, options);
+  demo.start();
+  demo1.start();
+  demo2.start();
+</script>
+
 <div class="middle">
   <div class="middle_text">
     <p class="middle_text1">侯斯特，一站式微信营销及粉丝管理平台</p>
     <p class="middle_text2">基于公众号管理粉丝关系和挖掘潜在销售机会，实现真正的Social CRM</p>
 
     <div class="middle_button">
-      <button>产品体验</button>
-      <button>现在注册</button>
+      <a href="http://www.weixinhost.com/demonstration">
+      <button>产品体验</button></a>
+      <a href="http://client.weixinhost.com/register.html" target="_blank">
+      <button>现在注册</button></a>
     </div>
   </div>
   <div class="middle_bottom">
     <div class="middle_shuzi">
-      <span>粉丝增长速度平均提升<span class="shuzi">43%</span></span>|
-      <span>图文阅读率平均提升<span class="shuzi">36%</span></span>|
-      <span>粉丝活跃度平均提升<span class="shuzi">78%</span></span>
+      <div class="middle_shuzi_span">粉丝增长速度平均提升     <span class="shuzi" id="first"></span></div>
+      <div class="middle_shuzi_span">图文阅读率平均提升    <span class="shuzi" id="secound"></span></div>
+      <div class="middle_shuzi_span">粉丝活跃度平均提升    <span class="shuzi" id="third"></span></div>
     </div>
   </div>
 </div>

@@ -307,11 +307,12 @@ body {
     font-size: 1.6rem;
     
 }
-.middle_shuzi{
+
+.middle_shuzi_span{
+    width: 33%;
+    float: left;
     text-align: center;
-}
-.middle_shuzi span{
-    width: 20rem;
+    line-height:7rem;
 }
 .shuzi{
     font-size: 3rem;
