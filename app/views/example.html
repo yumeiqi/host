@@ -1,0 +1,280 @@
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(".main_visual").hover(function(){
+        $("#btn_prev,#btn_next").fadeIn()
+    },function(){
+        $("#btn_prev,#btn_next").fadeOut()
+    });
+    
+    $dragBln = false;
+    
+    $(".main_image").touchSlider({
+        flexible : true,
+        speed : 200,
+        btn_prev : $("#btn_prev"),
+        btn_next : $("#btn_next"),
+        paging : $(".flicking_con a"),
+        counter : function (e){
+            $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+        }
+    });
+    
+    $(".main_image").bind("mousedown", function() {
+        $dragBln = false;
+    });
+    
+    $(".main_image").bind("dragstart", function() {
+        $dragBln = true;
+    });
+    
+    $(".main_image a").click(function(){
+        if($dragBln) {
+            return false;
+        }
+    });
+    
+    timer = setInterval(function(){
+        $("#btn_next").click();
+    }, 5000);
+    
+    $(".main_visual").hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        },5000);
+    });
+    
+    $(".main_image").bind("touchstart",function(){
+        clearInterval(timer);
+    }).bind("touchend", function(){
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 5000);
+    });
+
+    $('#jsCarousel').jsCarousel({ onthumbnailclick: function(src) { 
+    // 可在这里加入点击图片之后触发的效果
+    $("#overlay_pic").attr('src', src);
+    $(".overlay").show();
+    }, autoscroll: true });
+    
+    $(".overlay").click(function(){
+        $(this).hide();
+    });
+    
+});
+
+$(function(){
+    $('#scroll').owlCarousel({
+        items: 4,
+        autoPlay: true,
+        navigation: true,
+        navigationText: ["",""],
+        scrollPerPage: true
+    });
+});
+</script>
+<div class="app app-header-fixed" id="app">
+    <div class="">
+        <p class="example_title">我们的客户</p>
+        <p class="example_little_title">了解公众号背后的故事</p>
+        <div class="main_visual">
+            <div class="main_image">
+                <ul>
+                    <li>
+                        <div>
+                            <div class="example">
+                                <div class="example_all">
+                                    <div class="example_title_image">
+                                        <img src="images/yingteer.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <p class="example_txt">帮助英特尔管理粉丝</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="example_txtp_div">
+                                    <p>
+                                        英特尔中国在侯斯特的帮助下，将粉丝清晰地进行属性分类。通过挖掘线上Campaign及线下Event的数据，进一步分析归类粉丝，并以此提供个性化的菜单及内容，创建粉丝的专属体验。
+                                    </p>
+                                </div>
+                                <div class="example_m_all">
+                                    <div>
+                                        <img src="images/in1.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/in2.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/in3.png" alt=".">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="example">
+                                <div class="example_all">
+                                    <div class="example_title_image" style="margin-top:1.5em;">
+                                        <img src="images/jiashide.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <p class="example_txt">帮助佳士得服务客户</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="example_txtp_div">
+                                    <p>
+                                        佳士得在侯斯特的帮助下正在革新面向中国消费者的全套服务。使用微站升级内容浏览体验，同时专属的微信客服系统帮助艺术专家更好的服务顾客，而拍卖的进展也都通过模板消息进行更新。
+                                    </p>
+                                </div>
+                                <div class="example_m_all">
+                                    <div>
+                                        <img src="images/jsd1.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/jsd2.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/jsd3.png" alt=".">
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="example">
+                                <div class="example_all" style="margin-left:30%;">
+                                    <div class="example_title_image" style="margin-top:1.5em;">
+                                        <img src="images/weiruan.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <p class="example_txt">帮助微软促进销售</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="example_txtp_div">
+                                    <p>
+                                        微软在侯斯特的帮助下，统计各路数据汇总在粉丝数据库，将公众号变为销售直接的辅助工具。数据包括粉丝的文章浏览记录、参与网页互动记录、试用申请记录、线下展会记录等。
+                                    </p>
+                                </div>
+                                <div class="example_m_third">
+                                    <div>
+                                        <img src="images/mi1.png" alt=".">
+                                    </div>
+                                    <div>
+                                        <img src="images/mi2.jpg" alt="." style="width:60%;">
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="javascript:;" id="btn_prev"></a>
+                <a href="javascript:;" id="btn_next"></a>
+            </div>
+
+        </div>
+        <div style="width:100%; height: 30rem; background-color:#F5F5F5; margin-top:-10rem;" >
+            <div>
+                <p class="example_div_tp">10万公众号的共同选择</p>
+            </div>
+            <div class="example_div_all gray">
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+                <div>
+                    <img src="images/jumeiyoupin.png" alt=".">
+                </div>
+            </div>
+        </div>
+
+        <p class="example_title">定制开发案例</p>
+        <p class="example_bottom_title">
+            侯斯特为你提供创意+设计+技术一体的解决方案
+        </p>
+        <div class="scroll-outer">
+            <div id="scroll" class="owl-carousel">
+                <div class="item">
+                    <img src="images/12@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/15@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/6@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/1@3x (1).png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/2@3x (1).png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/3@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/4@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/5@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/12@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/15@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/6@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/1@3x (1).png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/2@3x (1).png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/3@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/4@3x.png" alt=".">
+                </div>
+                <div class="item">
+                    <img src="images/5@3x.png" alt=".">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

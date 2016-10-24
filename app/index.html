@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.css" />
+    <link rel="stylesheet" href="bower_components/flickity/css/flickity.css" />
+    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="hostApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a href="#/" class="navbar-brand nav_logo">
+              <img src="images/logo_02.png" alt=".">
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                产品方案
+              </a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://scrm.weixinhost.com/">粉丝数据管理</a></li>
+                  <li class="divider"></li>
+                  <li><a ng-href="#/marketing_push">精细化营销</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://kol.wx-services.com/" target=_blank>KOL红人投放</a></li>
+                  <li class="divider"></li>
+                  <li><a ng-href="#/appstore">微信应用商店</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://itunes.apple.com/cn/app/hou-si-te-gong-zhong-zhang/id867350536?l=en&mt=8" target=_blank>手机App</a></li>
+                </ul>
+              </li>
+              <li><a ng-href="#/example">客户案例</a></li>
+              <li><a ng-href="#/pricing">服务价格</a></li>
+              <li><a ng-href="#/agent">渠道代理</a></li>
+              <li><a href="http://help.weixinhost.com/hc/" target=_blank>帮助中心</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="http://client.weixinhost.com/login.html" target=_blank>
+                  <span class="glyphicon glyphicon-log-in"></span>
+                    登录
+                </a>
+              </li>
+              <li>
+                <a href="http://client.weixinhost.com/register.html" target=_blank><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container"> -->
+    <div ng-view=""></div>
+    <!-- </div> -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer_left">  
+                <a ng-href="#/about">
+                  关于侯斯特
+                </a><br>
+                <a ng-href="#/term">
+                  使用协议
+                </a><br>
+                <a ng-href="#/partners">
+                  合作伙伴
+                </a><br>
+            </div>
+            <div class="footer_mid">
+                <a href="http://scrm.weixinhost.com/">
+                  粉丝数据管理
+                </a><br>
+                <a ui-sref="tab.marketing">
+                  精细化营销
+                </a><br>
+                <a href="http://kol.wx-services.com/" target=_blank>
+                  KOL红人投放
+                </a><br>
+                <a>
+                  微信应用商店
+                </a><br>
+                <a href="https://itunes.apple.com/cn/app/hou-si-te-gong-zhong-zhang/id867350536?l=en&mt=8" target=_blank>
+                  手机App
+                </a><br>
+            </div>
+            <div class="footer_mid_img">
+                关注我们及APP下载<br>
+                <div class= "footer_img">
+                  <a href="#" class="footer_img1">
+                  </a>
+                  <a href="http://weibo.com/wechathost" class="footer_img2" target=_blank>
+                  </a>
+                  <a href="#" class="footer_img3">
+                  </a>
+                </div>
+            </div>
+            <div class="footer_right">
+                商务洽谈：
+                <a href="mailto:contact@weixinhost.com">
+                  contact@weixinhost.com
+                </a><br>
+                加入我们：
+                <a href="mailto:hr@weixinhost.com">
+                  hr@weixinhost.com
+                </a><br>
+                客服电话：
+                <a href="tel:4006-110-680">
+                  4006-110-680
+                </a><br>
+            </div>
+            <div class="footer_bottom">
+              © Copyright 2016 北京侯斯特网络科技有限公司 京ICP备14034751号
+            </div>
+
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery.touchSlider/jquery.touchSlider.js"></script>
+    <script src="bower_components/swiper/dist/js/swiper.js"></script>
+    <script src="bower_components/desandro-matches-selector/matches-selector.js"></script>
+    <script src="bower_components/ev-emitter/ev-emitter.js"></script>
+    <script src="bower_components/fizzy-ui-utils/utils.js"></script>
+    <script src="bower_components/get-size/get-size.js"></script>
+    <script src="bower_components/unipointer/unipointer.js"></script>
+    <script src="bower_components/tap-listener/tap-listener.js"></script>
+    <script src="bower_components/unidragger/unidragger.js"></script>
+    <script src="bower_components/flickity/js/index.js"></script>
+    <script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="bower_components/countUp.js/dist/countUp.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/partners.js"></script>
+        <script src="scripts/controllers/term.js"></script>
+        <script src="scripts/controllers/marketing_push.js"></script>
+        <script src="scripts/controllers/agent.js"></script>
+        <script src="scripts/controllers/appstore.js"></script>
+        <script src="scripts/controllers/example.js"></script>
+        <script src="scripts/controllers/pricing.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
