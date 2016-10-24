@@ -266,6 +266,13 @@ body {
     margin-top: 19rem;
 }
 
+
+
+.icon-chat {position: relative;}
+.icon-chat:hover .chat-tips {display: block;}
+.chat-tips {position: absolute;left:-7.5rem;top: -17rem;display: none; z-index: 999999;}
+.chat-tips img {width: 200px;height: 200px;}
+
 /*主页面*/
 .middle{
     width: 100%;
